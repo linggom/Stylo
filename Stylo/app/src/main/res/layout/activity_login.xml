@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/com_facebook_button_blue"
+        android:padding="@dimen/com_facebook_loginview_compound_drawable_padding"
+        android:drawablePadding="@dimen/com_facebook_loginview_compound_drawable_padding"
+        android:text="Log in with Facebook"
+        android:drawableLeft="@drawable/com_facebook_inverse_icon"
+        android:id="@+id/btn_login_fb"
+        android:textColor="@color/com_facebook_loginview_text_color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="152dp" />
+</RelativeLayout>
