@@ -3,5 +3,7 @@
     <color name="list_item_background">#44000000</color>
     <color name="white">#ffffff</color>
     <color name="green">#2980b9</color>
+    <color name="red">#e74c3c</color>
+    <color name="grey">#7f8c8d</color>
 
 </resources>

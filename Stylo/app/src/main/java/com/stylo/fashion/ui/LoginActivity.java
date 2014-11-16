@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -21,6 +22,16 @@ import com.stylo.fashion.helper.LoginHelper;
 import com.stylo.fashion.util.Session.SessionManager;
 import com.stylo.fashion.util.http.UICallback;
 
+import org.opensocial.Client;
+import org.opensocial.RequestException;
+import org.opensocial.Response;
+import org.opensocial.auth.AuthScheme;
+import org.opensocial.auth.OAuth2LeggedScheme;
+import org.opensocial.models.Model;
+import org.opensocial.providers.Provider;
+import org.opensocial.services.PeopleService;
+
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -36,10 +47,12 @@ public class LoginActivity extends Activity implements UICallback, LoginHelper.L
         mHelper = new LoginHelper(this, this);
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         mBntLoginFacebook = (Button) findViewById(R.id.btn_login_fb);
         mBntLoginFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
