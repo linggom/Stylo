@@ -24,7 +24,7 @@ public class GenerelHelper {
         return (collection.size() == 0);
     }
 
-    public static boolean isListNullOrEmpty(Objects[] collection){
+    public static boolean isListNullOrEmpty(Object[] collection){
         if (collection == null){
             return true;
         }

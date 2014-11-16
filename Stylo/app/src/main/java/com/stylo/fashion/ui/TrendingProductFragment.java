@@ -17,8 +17,7 @@ import com.stylo.fashion.model.Product;
 import java.util.ArrayList;
 
 
-public class TrendingProductFragment extends Fragment {
-
+public class TrendingProductFragment extends Fragment{
     private ListView mListProduct;
     private ProductAdapter mAdapter;
     private Activity mActivity;

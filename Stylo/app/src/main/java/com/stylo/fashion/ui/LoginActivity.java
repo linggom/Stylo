@@ -52,7 +52,7 @@ public class LoginActivity extends Activity implements UICallback, LoginHelper.L
                                 .newSession("1516241068642254",
                                         "goman",
                                         "linggom@ymail.com");
-                        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                        Intent i = new Intent(LoginActivity.this, ProfileActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         finish();
                         startActivity(i);
