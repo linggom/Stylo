@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,8 +20,9 @@ import com.stylo.fashion.R;
 import com.stylo.fashion.util.Session.SessionManager;
 
 
-public class HomeActivity extends Activity
+public class HomeActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+    public static final String TAG = HomeActivity.class.getSimpleName();
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private DiscoverProductFragment mProductFragment;
     private TrendingProductFragment mTrendingProductFragment;
@@ -65,13 +67,20 @@ public class HomeActivity extends Activity
                         .replace(R.id.container, new TrendingProductFragment())
                         .commit();
                 break;
+            case 2 :
+                SessionManager.getInstance(this).clearSession();
+                Intent i = new Intent(this, LoginActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+                finish();
+                break;
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        SessionManager.getInstance(this).clearSession();
+
     }
 
     public void onSectionAttached(int number) {
@@ -92,12 +101,17 @@ public class HomeActivity extends Activity
         actionBar.setTitle(mTitle);
     }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_search) {
+
             return true;
         }
         return super.onOptionsItemSelected(item);

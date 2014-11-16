@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.stylo.fashion.ui.NavigationDrawerFragment;
 import com.stylo.fashion.util.GenerelHelper;
 import com.stylo.fashion.util.contract.AppConstant;
 
@@ -38,7 +39,10 @@ public class SessionManager {
     }
 
     public void clearSession(){
-        mPreferences.edit().putString(AppConstant.APP_SESSION_TOKEN, null).commit();
+        mPreferences.edit().putString(AppConstant.APP_SESSION_TOKEN,    null).commit();
+        mPreferences.edit().putString(AppConstant.APP_SESSION_EMAIL,    null).commit();
+        mPreferences.edit().putString(AppConstant.APP_SESSION_USERNAME, null).commit();
+        mPreferences.edit().putBoolean(NavigationDrawerFragment.PREF_USER_LEARNED_DRAWER, true).commit();
     }
 
     public SessionManager(Context context) {
@@ -47,14 +51,14 @@ public class SessionManager {
     }
 
     public void newSession(String sessionToken, String username, String email) {
-        mPreferences.edit().putString(AppConstant.APP_SESSION_TOKEN, sessionToken).commit();
-        mPreferences.edit().putString(AppConstant.APP_SESSION_EMAIL, username).commit();
+        mPreferences.edit().putString(AppConstant.APP_SESSION_TOKEN,    sessionToken).commit();
+        mPreferences.edit().putString(AppConstant.APP_SESSION_EMAIL,    username).commit();
         mPreferences.edit().putString(AppConstant.APP_SESSION_USERNAME, email).commit();
     }
     public SessionObj getActiveSession(){
-        String sessionToken = mPreferences.getString(AppConstant.APP_SESSION_TOKEN, null);
-        String sessionEmail = mPreferences.getString(AppConstant.APP_SESSION_EMAIL, null);
-        String sessionUsername = mPreferences.getString(AppConstant.APP_SESSION_USERNAME, null);
+        String sessionToken = mPreferences.getString(AppConstant.APP_SESSION_TOKEN,         null);
+        String sessionEmail = mPreferences.getString(AppConstant.APP_SESSION_EMAIL,         null);
+        String sessionUsername = mPreferences.getString(AppConstant.APP_SESSION_USERNAME,   null);
         SessionObj obj = new SessionObj(sessionToken, sessionUsername, sessionEmail);
         return obj;
     }

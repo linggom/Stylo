@@ -7,6 +7,7 @@
     <string name="title_activity_home">Home</string>
     <string name="title_discover_section">Discover Style</string>
     <string name="title_trending_section">Trending Style</string>
+    <string name="title_logout">Logout</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
