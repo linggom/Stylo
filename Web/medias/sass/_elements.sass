@@ -1,0 +1,292 @@
+.left
+	float: left
+.right
+	float: right
+.inner
+	padding: $main-padding
+.clear
+	clear: both
+.hide
+	display: none
+
+.modal
+	background: white
+	width: 500px
+	+box-shadow(0 0 6px $text-color)
+	.m-header, .m-content
+		padding: 25px 30px
+	.m-header
+		background: darken(white, 5%)
+		border-bottom: 1px solid darken(white, 7%)
+		text-transform: uppercase
+		font-size: 160%
+		line-height: 90%
+		.close
+			@extend .right
+			&:hover
+				text-decoration: none
+	.m-footer
+		background: $main-color
+		border-top: 3px solid darken($main-color, 5%)
+		padding: 10px 30px
+
+#leanOverlay
+	position: fixed
+	z-index: 20000
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background: #000
+	display: none
+
+.upload-form
+	background: darken($bg-color, 3%)
+	padding: 5px
+	.drop-area
+		border: 5px dashed darken($bg-color, 30%)
+		padding: 50px 5px
+		text-align: center
+		&.error
+			border-color: lighten($red, 20%)
+		span
+			display: block
+		i
+			font-size: 80%
+			font-style: normal
+			line-height: 100%
+			display: block
+			margin-top: 5px
+			color: lighten($text-color, 20%)
+		a
+			cursor: pointer
+			margin-top: 15px
+		input
+			display: none
+.loader
+	@extend .hide
+	padding: 50px 0
+	.animation
+		width: 100px
+		height: 100px
+		background: 
+			image: url(../images/loader.gif)
+			repeat: no-repeat
+			position: center center
+			size: 100% 100%
+		margin: 0 auto
+
+.button
+	border: 2px solid darken($main-color, 15%)
+	border:
+		top-width: 0
+		left-width: 0
+		right-width: 0
+	text-transform: uppercase
+	padding: 7px 30px
+	font-family: $main-font
+	font-size: 100%
+	background: $main-color
+	color: white
+	display: inline-block
+	cursor: pointer
+	&.small
+		padding: 7px 20px 5px
+		font-size: 80%
+	&:hover
+		text-decoration: none
+		color: white
+		background: darken($main-color, 4%)
+	&:active, &:focus
+		background: darken($main-color, 10%)
+		color: white
+	&.red
+		background: $red
+		color: white
+		border-color: darken($red, 15%)
+		&:hover
+			background: darken($red, 4%)
+			color: white
+		&:active, &:focus
+			background: darken($red, 10%)
+			color: white
+	&.gray
+		background: $gray
+		color: white
+		border-color: darken($gray, 15%)
+		&:hover
+			background: darken($gray, 4%)
+			color: white
+		&:active, &:focus
+			background: darken($gray, 10%)
+			color: white
+	&.square
+		background: none
+		border: 2px solid lighten($main-color, 10%)
+		color: lighten($main-color, 10%)
+		&:hover
+			border-color: darken($main-color, 5%)
+			color: darken($main-color, 5%)
+		&:active, &:focus
+			border-color: darken($main-color, 10%)
+			color: darken($main-color, 10%)
+		&.red
+			background: none
+			border-color: lighten($red, 10%)
+			color: lighten($red, 10%)
+			&:hover
+				border-color: darken($red, 5%)
+				color: darken($red, 5%)
+			&:active, &:focus
+				border-color: darken($red, 10%)
+				color: darken($red, 10%)
+		&.gray
+			background: none
+			border-color: $gray
+			color: $gray
+			&:hover
+				border-color: darken($gray, 15%)
+				color: darken($gray, 15%)
+			&:active, &:focus
+				border-color: darken($gray, 20%)
+				color: darken($gray, 20%)
+button
+	&.button
+		padding-top: 15px
+		padding-bottom: 15px
+a
+	&.button
+		margin-bottom: 3px
+		margin-right: 2px
+		margin-left: 2px
+input[type="text"], input[type="password"], select, textarea
+	display: block
+	width: 100%
+	min-width: 300px
+	border: 2px solid lighten($gray, 20%)
+	padding: 10px 10px
+	font-family: $main-font
+	font-size: $main-font-size
+	outline: none
+	&.small
+		width: 300px
+	&.medium
+		width: 400px
+	&.big
+		width: 600px
+	&:hover
+		border-color: lighten($gray, 10%)
+	&:active, &:focus
+		border-color: darken($gray, 10%)
+textarea
+	height: 80px
+label
+	display: inline-block
+	font-size: 85%
+	line-height: 100%
+	color: lighten($text-color, 3%)
+form
+	.field
+		margin-bottom: 20px
+		.input
+			font-weight: bold
+			font-size: 120%
+			line-height: 100%
+			margin: 2px 0 5px 0
+		.desc
+			font-size: 85%
+			display: block
+			line-height: 100%
+			color: lighten($text-color, 40%)
+	.space
+		border: 1px solid darken($bg-color, 5%)
+		margin-bottom: 20px
+		margin-top: 30px
+
+.messages
+	padding: 20px 30px
+	background: lighten($yellow, 35%)
+	color: lighten($text-color, 30%)
+	&.green
+		background: lighten($green, 43%)
+	&.red
+		background: lighten($red, 33%)
+.grids
+	padding: 30px
+	.container
+		list-style-type: none
+		padding: 0
+		margin: 0
+		position: relative
+	li
+		width: 210px
+		padding: 0
+		a
+			display: block
+			width: auto
+			&:hover
+				text-decoration: none
+		img
+			width: 100%
+			display: block
+			position: relative
+			+box-shadow(0 0 5px darken($bg-color, 30%))
+			+filter(grayscale(100%))
+		.description
+			position: absolute
+			left: 7px
+			right: 7px
+			bottom: 7px
+			.text
+				padding: 10px
+				overflow: hidden
+				color: white
+				opacity: 0
+				max-height: 170px
+				background: darken($text-color, 3%)
+				+transition(all .5s ease-in-out)
+			.critiques, .items
+				@extend .left
+				+transition(all .5s ease-in-out)
+				background: lighten($text-color, 1%)
+				text-align: center
+				color: lighten($text-color, 40%)
+				opacity: .4
+				span
+					display: block
+					font-size: 200%
+					padding: 10px 0 0 0
+					margin: 0
+			.critiques
+				width: 65%
+				padding: 0 0 5px 10px
+				border-right: 1px solid lighten($text-color, 3%)
+			.items
+				width: 35%
+				padding: 0 10px 5px 0
+				border-left: 1px solid lighten($text-color, 3%)
+		.inner
+			background: darken($bg-color, 8%)
+			padding: 7px
+		.grid-hover
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			opacity: 0
+			background-size: 30px 30px
+			background-image: linear-gradient(45deg, rgba(black, 0.2) 25%, transparent 25%, transparent 50%, rgba(black, 0.2) 50%, rgba(black, 0.2) 75%, transparent 75%, transparent)
+			+transition(opacity .3s ease)
+			-webkit-animation: barberpole .5s linear infinite
+		&:hover
+			.grid-hover
+				opacity: 1
+			img
+				+filter(none)
+				+transition(all .2s linear)
+			.description
+				.text
+					opacity: .7
+				.critiques, .items
+					opacity: .9

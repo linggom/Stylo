@@ -1,0 +1,91 @@
+.main-list
+	background: none
+	.inner
+		padding: 30px
+	h6
+		margin: 0
+		padding: 0
+		line-height: 100%
+		font-size: 130%
+	.information
+		padding: 30px 30px 20px 30px
+		background: darken($bg-color, 7%)
+		border-bottom: 3px solid darken($bg-color, 8%)
+		.title
+			color: darken($text-color, 15%)
+			font-weight: bold
+			text-transform: uppercase
+			i
+				color: darken($bg-color, 25%)
+				margin-left: 5px
+				display: inline-block
+		.description
+			margin-top: 10px
+		.metadata
+			margin-top: 10px
+			font-size: 80%
+			line-height: 130%
+			color: darken($bg-color, 35%)
+			span
+				color: darken($bg-color, 25%)
+				&.time
+				&.by
+			.tag
+				line-height: 130%
+				margin-top: 5px
+				a
+					font-size: 80%
+					margin-right: 10px
+					&:last-child
+						margin-right: 0
+.lists
+	.list
+		border-top: 1px solid darken($bg-color, 10%)
+		padding: 20px 30px
+		clear: both
+		&:nth-child(odd)
+			background: darken($bg-color, 2%)
+	.metadata
+		font-size: 85%
+		color: lighten($text-color, 40%)
+		margin:
+			bottom: 5px
+		span
+			margin-right: 10px
+			//&.time
+			&.by
+				margin-right: 0
+				a
+					color: lighten($text-color, 30%)
+					&:hover
+						color: lighten($text-color, 25%)
+					&:focus, &:active
+						color: lighten($text-color, 20%)
+	.comment
+		.pic
+			@extend .right
+			background: darken($bg-color, 10%)
+			width: 50px
+			height: 50px
+			margin: 0 0 15px 15px
+	.field
+		margin-top: 10px
+.tree
+	margin-top: 10px
+	.link
+		a
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+	.items
+		margin: 25px 0 0 0
+		border-top: 1px solid darken($bg-color, 15%)
+		padding-left: 40px
+		.item
+			font-size: 95%
+			margin-top: 25px
+			.metadata
+				margin-bottom: 0
+			.comment
+				font-size: 100%
+

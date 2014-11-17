@@ -1,0 +1,100 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-air1:before {
+	content: "\e000";
+}
+.flaticon-airplane70:before {
+	content: "\e001";
+}
+.flaticon-bag2:before {
+	content: "\e002";
+}
+.flaticon-barometer:before {
+	content: "\e003";
+}
+.flaticon-bicycle2:before {
+	content: "\e004";
+}
+.flaticon-boat17:before {
+	content: "\e005";
+}
+.flaticon-bus46:before {
+	content: "\e006";
+}
+.flaticon-car95:before {
+	content: "\e007";
+}
+.flaticon-clouds11:before {
+	content: "\e008";
+}
+.flaticon-cocktail29:before {
+	content: "\e009";
+}
+.flaticon-coconut8:before {
+	content: "\e00a";
+}
+.flaticon-coffee67:before {
+	content: "\e00b";
+}
+.flaticon-feminine8:before {
+	content: "\e00c";
+}
+.flaticon-hotel68:before {
+	content: "\e00d";
+}
+.flaticon-ice15:before {
+	content: "\e00e";
+}
+.flaticon-person91:before {
+	content: "\e00f";
+}
+.flaticon-photo147:before {
+	content: "\e010";
+}
+.flaticon-place4:before {
+	content: "\e011";
+}
+.flaticon-plate17:before {
+	content: "\e012";
+}
+.flaticon-road24:before {
+	content: "\e013";
+}
+.flaticon-scooter7:before {
+	content: "\e014";
+}
+.flaticon-suitcase35:before {
+	content: "\e015";
+}
+.flaticon-suitcase9:before {
+	content: "\e016";
+}
+.flaticon-sun79:before {
+	content: "\e017";
+}
+.flaticon-train20:before {
+	content: "\e018";
+}
+.flaticon-tree13:before {
+	content: "\e019";
+}
+.flaticon-truck31:before {
+	content: "\e01a";
+}
+.flaticon-winds4:before {
+	content: "\e01b";
+}
